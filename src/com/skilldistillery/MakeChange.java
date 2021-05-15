@@ -34,7 +34,7 @@ public class MakeChange {
 
 			while (totalChange > 0) {
 
-				if (totalChange > 20.00) {
+				if (totalChange >= 20.00) {
 					// give twenties
 					twenties = (int) (totalChange / 20.00);
 					totalChange = totalChange - (twenties * 20.00);
@@ -49,7 +49,7 @@ public class MakeChange {
 
 				}
 
-				else if (totalChange > 10.00) {
+				else if (totalChange >= 10.00) {
 					// give tens
 					tens = (int) (totalChange / 10.00);
 					totalChange = totalChange - (tens * 10.00);
@@ -64,7 +64,7 @@ public class MakeChange {
 
 				}
 
-				else if (totalChange > 5.00) {
+				else if (totalChange >= 5.00) {
 					// give fives
 					fives = (int) (totalChange / 5.00);
 					totalChange = totalChange - (fives * 5.00);
@@ -77,7 +77,7 @@ public class MakeChange {
 
 					}
 
-				} else if (totalChange > 1.00) {
+				} else if (totalChange >= 1.00) {
 					// give ones
 					ones = (int) (totalChange / 1.00);
 					totalChange = totalChange - (ones * 1.00);
@@ -90,7 +90,7 @@ public class MakeChange {
 
 					}
 
-				} else if (totalChange > 0.25) {
+				} else if (totalChange >= 0.25) {
 					// give quarters
 					quarters = (int) (totalChange / 0.25);
 					totalChange = totalChange - (quarters * 0.25);
@@ -103,7 +103,7 @@ public class MakeChange {
 
 					}
 
-				} else if (totalChange > 0.10) {
+				} else if (totalChange >= 0.10) {
 					// give dimes
 					dimes = (int) (totalChange / 0.10);
 					totalChange = totalChange - (dimes * 0.10);
@@ -116,7 +116,7 @@ public class MakeChange {
 
 					}
 
-				} else if (totalChange > 0.05) {
+				} else if (totalChange >= 0.05) {
 					// give nickels
 					nickels = (int) (totalChange / 0.05);
 					totalChange = totalChange - (nickels * 0.05);
