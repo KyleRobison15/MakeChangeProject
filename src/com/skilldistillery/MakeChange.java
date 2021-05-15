@@ -5,35 +5,39 @@ import java.util.Scanner;
 public class MakeChange {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner kb = new Scanner(System.in);
 		
+		Scanner kb = new Scanner(System.in);
+		double itemPrice, amountTendered;
+		 
 		System.out.println("What is the price of your item?");
-		double itemPrice = kb.nextDouble();
+		itemPrice = kb.nextDouble();
 		
 		System.out.println("How much money did you tender?");
-		double amountTendered = kb.nextDouble();
+		amountTendered = kb.nextDouble();
 		
 		if (amountTendered < itemPrice) {
 		System.out.println("You did not tender enough to purchase this item! Please give me more money. Aghhhh!");
 		
 		}
 		else if (amountTendered == itemPrice){
-		System.out.println("Thank you. Come again!");
+		System.out.println("Thank you. No change is needed. Come again!");
 			
 		}
 		
 		else {
 			
-			changeNeeded(); //calling the method changeNeeded()
-			
+			while (itemPrice > 0) {
+				changeNeeded(itemPrice, amountTendered); //calling the method changeNeeded()
+				
+			}
+				
+			}
+			kb.close();
 		}
 		
-		
-	}
 
-	public static void changeNeeded() {
-		System.out.println("Your change is: ");
+	public static void changeNeeded(double itemPrice, double amountTendered) {
+		System.out.println("" ); //TODO build out the changeNeeded method to find denominations of change to be returned
 		
 		
 		
